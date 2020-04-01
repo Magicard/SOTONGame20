@@ -35,7 +35,10 @@ public class movementScript : MonoBehaviour
             velocity.y = -2f;
         }
 
-       
+        /*if (!isGrounded)
+        {
+            x = 0;
+        }*/
 
 
 
