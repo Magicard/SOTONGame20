@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 465697560}
   - component: {fileID: 465697559}
   - component: {fileID: 465697558}
+  - component: {fileID: 465697562}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Player
@@ -214,6 +215,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &465697562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465697557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a40984a0123cf4f96d9cd2364a94cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
 --- !u!1 &743678549
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df05aa146e035648b79650b3054902d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 465697561}
 --- !u!135 &986421918
 SphereCollider:
   m_ObjectHideFlags: 0
