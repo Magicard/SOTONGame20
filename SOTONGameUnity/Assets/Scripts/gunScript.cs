@@ -8,14 +8,8 @@ public class gunScript : MonoBehaviour
 
     public float damage = 10f;
     public float range = 10500f;
-    public Material transparent;
-    public GameObject gun;
-    public AudioSource soundEffect;
-    public AudioSource soundEffect2;
-    public bool slowMo;
+
     public Camera fpsCamera;
-    public GameObject player;
-    public bool isGround;
 
     // Start is called before the first frame update
     void Start()
@@ -28,46 +22,19 @@ public class gunScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (!soundEffect.isPlaying)
-            {
-                particle.Play();
-                Debug.Log("leftclick");
-                Shoot();
-            }
-        }
-
- 
-
-        if (Input.GetButton("Fire2")&& !player.GetComponent<movementScript>().isGrounded)
-        {
-            soundEffect.Play(1);
-            Time.timeScale = 0.1f;
-            slowMo = true;
-        }
-        else
-        {
-            soundEffect2.Stop();
-            slowMo = false;
-            Time.timeScale = 1f;
+            particle.Play();
+            Debug.Log("leftclick");
+            Shoot();
         }
     }
-    
 
     void Shoot()
     {
         RaycastHit hit;
-        if (slowMo)
-        {
-            soundEffect.pitch = 0.75f;
-        }
-        else
-        {
-            soundEffect.pitch = 1f;
-        }
-        soundEffect.Play(0);
-        drawLine(fpsCamera.transform.position, fpsCamera.transform.forward * 2000f, Color.green, 0.5f);
+        drawLine(fpsCamera.transform.position, fpsCamera.transform.forward * 2000f, Color.green, 0.2f);
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
+            
             getHitScript target= hit.transform.GetComponent<getHitScript>();
             if (target!=null)
             {
@@ -76,11 +43,8 @@ public class gunScript : MonoBehaviour
         }
     }
 
-    void drawLine( Vector3 start, Vector3 end, Color color, float duration= 0.5f)
+    void drawLine( Vector3 start, Vector3 end, Color color, float duration= 0.2f)
     {
-      
-        
-
         GameObject myLine = new GameObject();
         myLine.transform.position = start;
         myLine.AddComponent<LineRenderer>();
@@ -89,8 +53,6 @@ public class gunScript : MonoBehaviour
         lr.SetWidth(0.1f, 0.1f);
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
-        Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
-        lr.material = transparent;
         GameObject.Destroy(myLine, duration);
     }
 }
