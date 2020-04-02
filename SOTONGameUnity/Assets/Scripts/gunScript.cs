@@ -40,13 +40,11 @@ public class gunScript : MonoBehaviour
 
         if (Input.GetButton("Fire2")&& !player.GetComponent<movementScript>().isGrounded)
         {
-            soundEffect.Play(1);
             Time.timeScale = 0.1f;
             slowMo = true;
         }
         else
         {
-            soundEffect2.Stop();
             slowMo = false;
             Time.timeScale = 1f;
         }
