@@ -1176,6 +1176,21 @@ PrefabInstance:
       propertyPath: maxFrameTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 171804056345067219, guid: 48a505774eb4e194e991f10172458457,
+        type: 3}
+      propertyPath: showNavGraphs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 171804056345067219, guid: 48a505774eb4e194e991f10172458457,
+        type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAAAAIexiuQG/dwIAAB0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVE1zmzAQ/SsenRsPxnyY3lriOD3kY+p2cuEiw2I0FhIjidhOxv+9KwGGeOoLeN/bt/t2JT4JE7qB3Ei1Uax4kgWQ7zNi38m32Qg+wonupdiyDxg4b6wwlSVRx/lNDZMYX9g0LWswiuU/xJ5bsofBVrBSqnpd7CGV2mgMl5RrQEhJY7MFhj5n5ISPZZjMQz8KQ0TPvcCHfc4u+JaDMKBGtjcfeHf+PE5Wfhz0/NXcWwRe4LJakXNaN1BYF2PyIkr65EW8ckSBDnuOdZNLzpnu2yPm3Dj7KW10i+aQUDCKdl1Dll8B21cG//jT5Jey1GB6K4qe75nCqXWq5KfsRllTfeg6e6e8tXXChe966kSf/oMvHF4qWT8OhReeLWIqlh9+03NOtZkMexq+/9p5K46UH+iOw1sF4llulGxFgaBRrU1tNfj3E6mrubSC/DDyumZvgm0zWdiw1nmCvyhcBXG/sDtv7nkrP/KjJW7t4mZySjmrd44edIEtl24LiRUChfv6hS7cGdK9PEZtZ381/KH76WHrgQemtEGoty5syzvZKkslazdI67A1qVQCXLg30oCg3JxfUcbcLvYGm5S9QR6ovVZ98R4bbstNiguPfM+7gV7l8bpBXcnjE+jqpTWcCRibtsAzzimVQnTnbjqTIW3bqpLmk7R9y4qvB44EkES7VbDMIY7zZBnc5aUfLuPE98LCS6IiIO5AMoE+KX/tGu3Hg1sTo7jAwzd8bWYbRRt3BwpFjxv2UcvJyJko5TZXAOKlU7g2DgqL4F0t1gXDAW3BGCbcvslnRrjMD1BkV6HMOV2fjKLZqJKRhr1LYyMZSd23JSMXcvkHUEsDBBQAAAgIAAAAIez4Ct/GbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSSaqlWZKFiXFyqrl5sqWxiW5ympGpsbmlkYFpioGlWYqJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAAIexiuQG/dwIAAB0FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAAIez4Ct/GbQAAAHgAAAAJACQAAAAAAAAAAAAAAMQCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAfAMAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 171804056345067219, guid: 48a505774eb4e194e991f10172458457,
+        type: 3}
+      propertyPath: showGraphs
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a505774eb4e194e991f10172458457, type: 3}
 --- !u!1 &1332380261
@@ -6724,6 +6739,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3567608987576143856, guid: d774d8cb05562f343852054b6f8ed622,
+        type: 3}
+      propertyPath: drawGizmos
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3567608987576143857, guid: d774d8cb05562f343852054b6f8ed622,
         type: 3}
       propertyPath: target
@@ -6747,7 +6767,7 @@ PrefabInstance:
     - target: {fileID: 3567608987576143867, guid: d774d8cb05562f343852054b6f8ed622,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12
+      value: 13.01
       objectReference: {fileID: 0}
     - target: {fileID: 3567608987576143867, guid: d774d8cb05562f343852054b6f8ed622,
         type: 3}
