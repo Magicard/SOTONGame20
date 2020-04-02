@@ -5,6 +5,10 @@ using UnityEngine;
 public class getHitScript : MonoBehaviour
 {
     public float hp = 50f;
+    public GameObject particles;
+    public Rigidbody rb;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +27,14 @@ public class getHitScript : MonoBehaviour
         hp -= amount;
         if (hp <=0f)
         {
+            
             Die();
         }
     }
 
     void Die()
     {
+        Instantiate(particles, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
     }
 }

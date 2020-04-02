@@ -36,11 +36,17 @@ public class gunScript : MonoBehaviour
             }
         }
 
- 
+        if (Input.GetButtonDown("Fire2"))
+        {
+            playSlowMo();
+            
+        }
 
-        if (Input.GetButton("Fire2")&& !player.GetComponent<movementScript>().isGrounded)
+
+        if (Input.GetButton("Fire2"))
         {
             Time.timeScale = 0.1f;
+            soundEffect2.Play();
             slowMo = true;
         }
         else
@@ -49,7 +55,11 @@ public class gunScript : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-    
+
+    void playSlowMo()
+    {
+        soundEffect2.Play();
+    }
 
     void Shoot()
     {
