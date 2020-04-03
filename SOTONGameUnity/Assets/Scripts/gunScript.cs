@@ -65,6 +65,7 @@ public class gunScript : MonoBehaviour
     {
         RaycastHit hit;
         if (slowMo)
+
         {
             soundEffect.pitch = 0.75f;
         }

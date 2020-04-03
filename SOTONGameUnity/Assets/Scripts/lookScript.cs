@@ -22,12 +22,16 @@ public class lookScript : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
+            mouseSensitivity = 550f;
             fov = 40f;
         }
         else
         {
+            mouseSensitivity = 175f;
             fov = 65f;
         }
+
+
 
         Camera.main.fieldOfView = fov;
 
