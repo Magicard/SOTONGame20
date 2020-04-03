@@ -7,7 +7,7 @@ public class gunScript : MonoBehaviour
     public ParticleSystem particle;
 
     public float damage = 10f;
-    public float range = 10500f;
+    public float range = 100500f;
     public Material transparent;
     public GameObject gun;
     public AudioSource soundEffect;
@@ -16,6 +16,8 @@ public class gunScript : MonoBehaviour
     public Camera fpsCamera;
     public GameObject player;
     public bool isGround;
+    public bool itHit;
+    public Vector3 shot;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class gunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (Input.GetButtonDown("Fire1"))
         {
             if (!soundEffect.isPlaying)
@@ -35,6 +39,7 @@ public class gunScript : MonoBehaviour
                 Shoot();
             }
         }
+        
 
         if (Input.GetButtonDown("Fire2"))
         {
@@ -46,6 +51,7 @@ public class gunScript : MonoBehaviour
         if (Input.GetButton("Fire2"))
         {
             Time.timeScale = 0.1f;
+            soundEffect2.pitch = 1.75f;
             soundEffect2.Play();
             slowMo = true;
         }
@@ -74,22 +80,26 @@ public class gunScript : MonoBehaviour
             soundEffect.pitch = 1f;
         }
         soundEffect.Play(0);
-        drawLine(fpsCamera.transform.position, fpsCamera.transform.forward * 2000f, Color.green, 0.5f);
+        shot = gun.transform.forward * 2000f;
+        
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
+            
             getHitScript target= hit.transform.GetComponent<getHitScript>();
             if (target!=null)
             {
+                shot = target.transform.position;
+                
                 target.TakeDamage(damage);
             }
+
         }
+        drawLine(gun.transform.position,shot, Color.green, 0.5f);
+
     }
 
     void drawLine( Vector3 start, Vector3 end, Color color, float duration= 0.5f)
     {
-      
-        
-
         GameObject myLine = new GameObject();
         myLine.transform.position = start;
         myLine.AddComponent<LineRenderer>();
