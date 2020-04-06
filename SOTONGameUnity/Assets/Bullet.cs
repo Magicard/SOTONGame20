@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-	Rigidbody m_Rigidbody;
-	float m_Speed;
+
+	public GameObject TargetA;
+	public Vector3 TargetB;
+	public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-		m_Speed = 10.0f;
-		m_Rigidbody = GetComponent<Rigidbody>();
+		speed = 10.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
-
-		m_Rigidbody.velocity = transform.forward * m_Speed;
-
-
+		float step = speed * Time.deltaTime;
+		transform.position = Vector3.MoveTowards(transform.position, TargetB, step);
 
     }
 }
