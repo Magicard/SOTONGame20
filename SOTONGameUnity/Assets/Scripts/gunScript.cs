@@ -34,6 +34,9 @@ public class gunScript : MonoBehaviour
         {
             if (!soundEffect.isPlaying)
             {
+                var receiver = fpsCamera.GetComponent<StressReceiver>();
+                float stress = (1 - Mathf.Pow(1, 2)) * 0.6f;
+                receiver.InduceStress(stress);
                 particle.Play();
                 Debug.Log("leftclick");
                 Shoot();
@@ -69,6 +72,7 @@ public class gunScript : MonoBehaviour
 
     void Shoot()
     {
+
         RaycastHit hit;
         if (slowMo)
 
@@ -98,7 +102,7 @@ public class gunScript : MonoBehaviour
 
     }
 
-    void drawLine( Vector3 start, Vector3 end, Color color, float duration= 0.5f)
+    void drawLine(Vector3 start, Vector3 end, Color color, float duration = 0.5f)
     {
         GameObject myLine = new GameObject();
         myLine.transform.position = start;
@@ -110,6 +114,7 @@ public class gunScript : MonoBehaviour
         lr.SetPosition(1, end);
         Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
         lr.material = transparent;
+        Color trans = lr.material.color;
         GameObject.Destroy(myLine, duration);
     }
 }

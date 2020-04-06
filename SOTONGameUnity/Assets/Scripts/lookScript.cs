@@ -6,6 +6,7 @@ public class lookScript : MonoBehaviour
 {
 
     public float mouseSensitivity = 175f;
+    public float defaultMouseSensitivity = 175f;
     public Transform beetleBody;
     float xRot = 0f;
     float fov;
@@ -22,12 +23,12 @@ public class lookScript : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            mouseSensitivity = 550f;
+            mouseSensitivity = defaultMouseSensitivity* 3f;
             fov = 40f;
         }
         else
         {
-            mouseSensitivity = 175f;
+            mouseSensitivity = defaultMouseSensitivity;
             fov = 65f;
         }
 
