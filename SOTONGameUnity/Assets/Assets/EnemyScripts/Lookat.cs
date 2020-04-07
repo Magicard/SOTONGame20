@@ -9,9 +9,11 @@ public class Lookat : MonoBehaviour
 	public Transform playerDistance;
 	public GameObject Projectile;
 	public Transform originP;
+	public float cooldown;
     // Start is called before the first frame update
     void Start()
     {
+		cooldown = 0;
         
     }
 
@@ -27,8 +29,17 @@ public class Lookat : MonoBehaviour
 			if (dist <=10)
 			{
 				transform.LookAt(playerObject);
-				Instantiate (Projectile, originP.position, originP.rotation);
+
+				cooldown -=1;
+
+				if (cooldown <=  0 )
+				{
+					
+				Instantiate (Projectile, transform.position, Quaternion.identity);
+					cooldown = 100;
+				}
 			}
+
 
 		}
 
