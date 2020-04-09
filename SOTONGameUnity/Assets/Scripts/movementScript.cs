@@ -14,6 +14,7 @@ public class movementScript : MonoBehaviour
     public LayerMask groundMask;
 
     public AudioSource footsteps;
+    public AudioSource jump;
     public float x;
     Vector3 velocity;
     public bool isGrounded;
@@ -27,17 +28,19 @@ public class movementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2") )
         {
             footsteps.pitch = 0.6f;
+            jump.pitch = 0.3f;
 
         }
         else
         {
+            jump.pitch = 1f;
             footsteps.pitch = Random.Range(1.4f, 2.5f);
         }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) )&& isGrounded)
         {
             if (!footsteps.isPlaying)
             {
@@ -69,6 +72,7 @@ public class movementScript : MonoBehaviour
 
         if(Input.GetKey("space") && isGrounded)
         {
+            jump.Play(0);
             velocity.y = Mathf.Sqrt(jumpStrength * -2f * gravity);
         }
 

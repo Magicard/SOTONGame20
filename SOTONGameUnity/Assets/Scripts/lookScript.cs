@@ -36,6 +36,7 @@ public class lookScript : MonoBehaviour
             fov = 65f;
         }
 
+        ///This is me trying 
         /*if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
         {
             gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, upAngle.transform.rotation, (1f * Time.deltaTime) * 4);
