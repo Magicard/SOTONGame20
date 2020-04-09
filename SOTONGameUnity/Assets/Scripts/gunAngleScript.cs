@@ -10,16 +10,17 @@ public class gunAngleScript : MonoBehaviour
     public Transform rightAngle;
     public GameObject gun;
 
+    public Transform camera;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gun.transform.rotation = camera.transform.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        gun.transform.position = camera.transform.position;
 
         if (Input.GetKey(KeyCode.D))
         {

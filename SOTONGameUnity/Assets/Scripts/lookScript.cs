@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class lookScript : MonoBehaviour
 {
+    public Transform upAngle;
+    public Transform midAngle;
+    public Transform downAngle;
+    public GameObject gun;
 
     public float mouseSensitivity = 175f;
     public float defaultMouseSensitivity = 175f;
@@ -32,7 +36,19 @@ public class lookScript : MonoBehaviour
             fov = 65f;
         }
 
-
+        /*if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W))
+        {
+            gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, upAngle.transform.rotation, (1f * Time.deltaTime) * 4);
+            if (gun.transform.rotation.x <=-4.3f)
+            {
+                gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, upAngle.transform.rotation, (1f * Time.deltaTime) * 4);
+            }
+            if (gun.transform.rotation.x >= 4f)
+            {
+                gun.transform.rotation = Quaternion.Lerp(gun.transform.rotation, downAngle.transform.rotation, (1f * Time.deltaTime) * 4);
+            }
+        }*/
+   
 
         Camera.main.fieldOfView = fov;
 
