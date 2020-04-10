@@ -13,6 +13,7 @@ public class railScript : MonoBehaviour
     public GameObject gun;
     public AudioSource soundEffect;
     public AudioSource soundEffect2;
+    public AudioSource soundEffect3;
     public bool slowMo;
     public Camera fpsCamera;
     public GameObject player;
@@ -54,7 +55,6 @@ public class railScript : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             playSlowMo();
-            
         }
 
         if (Input.GetButton("Fire2"))
@@ -73,7 +73,7 @@ public class railScript : MonoBehaviour
 
     void playSlowMo()
     {
-        soundEffect2.Play();
+        soundEffect3.Play();
     }
 
     void Shoot()
