@@ -7,6 +7,8 @@ TagManager:
   - targetTag
   - pellet
   - 1
+  - FxTemporaire
+  - Splitter
   layers:
   - Default
   - TransparentFX

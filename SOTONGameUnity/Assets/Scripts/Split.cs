@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class getHitScript : MonoBehaviour
+public class Split : MonoBehaviour
 {
 	public float hp = 50f;
 	public GameObject particles;
@@ -32,11 +32,9 @@ public class getHitScript : MonoBehaviour
 		hp -= amount;
 		if (hp <=0f)
 		{
-			if (gameObject.transform.tag == "Splitter"){
 			Instantiate(small, OriginA.position, Quaternion.identity);
 			Instantiate(small, OriginB.position, Quaternion.identity);
 			Instantiate(small, OriginC.position, Quaternion.identity);
-			}
 			Die();
 		}
 	}

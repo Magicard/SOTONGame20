@@ -5,7 +5,7 @@ using UnityEditor.SceneManagement;
 
 public class minigunScript : MonoBehaviour
 {
-    public float damage = 10f;
+    public float damage = 0.5f;
     public float range = 100f;
     public bool slowMo;
     public Camera fpsCam;
