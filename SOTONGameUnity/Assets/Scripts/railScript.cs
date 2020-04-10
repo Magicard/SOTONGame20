@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
-public class gunScript : MonoBehaviour
+public class railScript : MonoBehaviour
 {
     public ParticleSystem particle;
 
@@ -17,43 +18,44 @@ public class gunScript : MonoBehaviour
     public GameObject player;
     public bool isGround;
     public bool itHit;
+    public bool itShot;
     public Vector3 shot;
-
+    public float myValue = 0f;
     public GameObject shootAnimObj;
     public Animator anim;
+    public GameObject rail;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = shootAnimObj.GetComponent<Animator>();
+        anim.Play(1);
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         if (Input.GetButtonDown("Fire1"))
         {
             if (!soundEffect.isPlaying)
-            {
+            { 
                 anim.Play(0);
                 var receiver = fpsCamera.GetComponent<StressReceiver>();
                 float stress = (1 - Mathf.Pow(1, 2)) * 0.6f;
                 receiver.InduceStress(stress);
                 particle.Play();
-                Debug.Log("leftclick");
                 Shoot();
             }
         }
-        
+
 
         if (Input.GetButtonDown("Fire2"))
         {
             playSlowMo();
             
         }
-
 
         if (Input.GetButton("Fire2"))
         {
@@ -106,19 +108,21 @@ public class gunScript : MonoBehaviour
 
     }
 
-    void drawLine(Vector3 start, Vector3 end, Color color, float duration = 0.5f)
+    void drawLine(Vector3 start, Vector3 end, Color color, float duration = 100f)
     {
         GameObject myLine = new GameObject();
+        myLine.name = "rail";
         myLine.transform.position = start;
         myLine.AddComponent<LineRenderer>();
         LineRenderer lr = myLine.GetComponent<LineRenderer>();
+        lr.material = transparent;
         lr.SetColors(color, color);
         lr.SetWidth(0.1f, 0.1f);
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
-        Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
-        lr.material = transparent;
+        
         Color trans = lr.material.color;
-        GameObject.Destroy(myLine, duration);
+        GameObject.Destroy(myLine, 2f);
     }
+
 }
