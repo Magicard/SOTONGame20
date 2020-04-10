@@ -22,10 +22,10 @@ public class moveImages : MonoBehaviour
     {
         picture2.transform.position = Vector3.Lerp(picture2.transform.position, picture1.transform.position, (1f*Time.deltaTime)/2);
         picture3.transform.position = Vector3.Lerp(picture3.transform.position, picture1.transform.position, (1f*Time.deltaTime)/4);
-        picture4.transform.position = Vector3.Lerp(picture4.transform.position, picture1.transform.position, (1f*Time.deltaTime)/7);
-        if (picture4.transform.position.x <10)
+        picture4.transform.position = Vector3.Lerp(picture4.transform.position, picture1.transform.position, (1f*Time.deltaTime)/6);
+        if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(2);
         }
     }
 }

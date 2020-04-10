@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 
 public class railScript : MonoBehaviour
 {
@@ -120,8 +119,6 @@ public class railScript : MonoBehaviour
         lr.SetWidth(0.1f, 0.1f);
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
-        
-        Color trans = lr.material.color;
         GameObject.Destroy(myLine, 2f);
     }
 
