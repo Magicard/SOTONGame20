@@ -19,10 +19,13 @@ public class gunScript : MonoBehaviour
     public bool itHit;
     public Vector3 shot;
 
+    public GameObject shootAnimObj;
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        anim = shootAnimObj.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class gunScript : MonoBehaviour
         {
             if (!soundEffect.isPlaying)
             {
+                anim.Play(0);
                 var receiver = fpsCamera.GetComponent<StressReceiver>();
                 float stress = (1 - Mathf.Pow(1, 2)) * 0.6f;
                 receiver.InduceStress(stress);
