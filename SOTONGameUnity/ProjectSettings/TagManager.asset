@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - targetTag
+  - pellet
   layers:
   - Default
   - TransparentFX
