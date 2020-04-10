@@ -6,6 +6,7 @@ TagManager:
   tags:
   - targetTag
   - pellet
+  - 1
   layers:
   - Default
   - TransparentFX
