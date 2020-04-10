@@ -85,6 +85,6 @@ public class menuScript : MonoBehaviour
 
     void nextScene()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
