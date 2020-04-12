@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1824159477920549869}
   - component: {fileID: 8356871339480143272}
   - component: {fileID: 8911530324054238118}
-  - component: {fileID: 2374834710158252256}
+  - component: {fileID: 3532065334842043609}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: pellet
@@ -111,7 +111,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &2374834710158252256
+--- !u!114 &3532065334842043609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1165071954921767637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7553bc3c9ea042046a805afaf6134a9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f63ab2d5e9d01b4882742196591c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
+  lifetime: 60
