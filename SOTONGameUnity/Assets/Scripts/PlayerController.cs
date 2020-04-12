@@ -32,14 +32,14 @@ public class PlayerController : MonoBehaviour
 			void OnCollisionEnter (Collision hit)
 			{
 		
+		
 		if(hit.transform.gameObject.name == "Splitter" & (grace == false))
 				{
 			grace = true;
 					Health -= 25.0f;
 				}
-
-
-		if(hit.transform.gameObject.name == "ProjectileE" & (grace == false))
+			
+		if(hit.transform.gameObject.name == "ProjectileE(Clone)" & (grace == false))
 		{
 			grace = true;
 			Health -= 25.0f;
@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
 			Health -= 25.0f;
 			}
 
-			}
+			
+	}
 
-			}
+			
+}

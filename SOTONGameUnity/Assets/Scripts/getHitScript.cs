@@ -47,8 +47,5 @@ public class getHitScript : MonoBehaviour
 		Destroy(gameObject);
 	}
 
-    void spawnSmall()
-    {
-
-    }
+  
 }
