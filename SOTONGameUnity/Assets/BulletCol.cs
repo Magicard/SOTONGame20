@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletCol : MonoBehaviour
 {
-	public float damage = 50f;
+	public float damage = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,7 @@ void OnCollisionEnter (Collision other) {
 			Debug.Log("PENIS");
 			Debug.Log(target);
 			target.TakeDamage(damage);
+            Destroy(gameObject);
 		}
 	
 		}

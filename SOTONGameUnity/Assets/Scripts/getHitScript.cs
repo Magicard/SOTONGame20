@@ -46,4 +46,9 @@ public class getHitScript : MonoBehaviour
 		Instantiate(particles, gameObject.transform.position, gameObject.transform.rotation);
 		Destroy(gameObject);
 	}
+
+    void spawnSmall()
+    {
+
+    }
 }
