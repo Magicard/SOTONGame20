@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2778653656738712548, guid: d2b7661baaac4e8458779c87f84f8914, type: 3}
   BulletRigidbody: {fileID: 5118943151868162712}
+  player: {fileID: 0}
   turn: 10
   bulletVelocity: 50
 --- !u!54 &5118943151868162712
@@ -126,7 +127,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &8746972234561196907
 GameObject:
