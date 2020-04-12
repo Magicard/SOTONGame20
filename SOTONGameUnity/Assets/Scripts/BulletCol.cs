@@ -23,13 +23,12 @@ public class BulletCol : MonoBehaviour
 	}
 
 void OnCollisionEnter (Collision other) {
-		Debug.Log("FUCK");
+		
 
 		getHitScript target = other.transform.GetComponent<getHitScript>();
 
 		if (target != null)
 		{
-			Debug.Log("PENIS");
 			Debug.Log(target);
 			target.TakeDamage(damage);
 			Destroy(gameObject);

@@ -21,8 +21,8 @@ public class moveImages : MonoBehaviour
     void Update()
     {
         picture2.transform.position = Vector3.Lerp(picture2.transform.position, picture1.transform.position, (1f*Time.deltaTime)/2);
-        picture3.transform.position = Vector3.Lerp(picture3.transform.position, picture1.transform.position, (1f*Time.deltaTime)/4);
-        picture4.transform.position = Vector3.Lerp(picture4.transform.position, picture1.transform.position, (1f*Time.deltaTime)/6);
+        picture3.transform.position = Vector3.Lerp(picture3.transform.position, picture1.transform.position, (1f*Time.deltaTime)/3);
+        picture4.transform.position = Vector3.Lerp(picture4.transform.position, picture1.transform.position, (1f*Time.deltaTime)/5);
         if (Input.anyKeyDown)
         {
             SceneManager.LoadScene(2);

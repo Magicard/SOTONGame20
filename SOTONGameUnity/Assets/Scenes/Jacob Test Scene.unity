@@ -284,8 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68dda41ef417544fbf003a4e1ec2150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
-  playerDistance: {fileID: 0}
+  playerObject: {fileID: 1403585737}
+  playerDistance: {fileID: 1403585737}
   Projectile: {fileID: 8746972233368580803, guid: ad1ac717ef8dcf344b5b1f95ed500c2f,
     type: 3}
   originP: {fileID: 1470459806}
@@ -823,7 +823,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1403585737}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be9a898ce235ce149b2232a3dd06c002, type: 3}
 --- !u!1 &273177594
@@ -1515,13 +1515,13 @@ PrefabInstance:
     - target: {fileID: 6589908057302398907, guid: 17af00fb9838e104f8dcb135cb37d0a5,
         type: 3}
       propertyPath: m_Name
-      value: Virus 2 Animated
+      value: Pinky
       objectReference: {fileID: 0}
     - target: {fileID: 7287937029405667222, guid: 17af00fb9838e104f8dcb135cb37d0a5,
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1403585737}
     - target: {fileID: 7867603480862033320, guid: 17af00fb9838e104f8dcb135cb37d0a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8315,11 +8315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1403585737}
     - target: {fileID: 5658734557153257731, guid: 7e0207b9818e7904da15b60b856b6236,
         type: 3}
       propertyPath: m_Name
-      value: Virus 3 Animated
+      value: Splitter
       objectReference: {fileID: 0}
     - target: {fileID: 8708981747562191632, guid: 7e0207b9818e7904da15b60b856b6236,
         type: 3}
@@ -8401,26 +8401,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9faf716d3a9e800498ea6b84f29f0e96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 50
-  particles: {fileID: 5365396035167598010, guid: b85481485df02fc41a3b2f5f8cb1ad35,
-    type: 3}
-  rb: {fileID: 0}
-  OriginA: {fileID: 200284923}
-  OriginB: {fileID: 1056204281}
-  OriginC: {fileID: 2041567674}
-  small: {fileID: 2044221949}
---- !u!114 &1290488231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290488221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327fbd36a0e95e144a5e28600a2086c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 50
@@ -9014,6 +8994,7 @@ GameObject:
   - component: {fileID: 1503191276}
   - component: {fileID: 1503191275}
   - component: {fileID: 1503191274}
+  - component: {fileID: 1503191277}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -9096,6 +9077,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503191272}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1503191277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503191272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bc51fd8803f1242b43fd8e5c4d40d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  graceperiod: 0
+  grace: 0
 --- !u!1 &1549599628
 GameObject:
   m_ObjectHideFlags: 0
