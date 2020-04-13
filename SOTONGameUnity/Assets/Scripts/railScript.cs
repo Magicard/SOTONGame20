@@ -25,13 +25,12 @@ public class railScript : MonoBehaviour
     public Animator anim;
     public GameObject rail;
 
+
     // Start is called before the first frame update
     void Start()
     {
         anim = shootAnimObj.GetComponent<Animator>();
         anim.Play(1);
-        
-        
     }
 
     // Update is called once per frame
@@ -49,13 +48,10 @@ public class railScript : MonoBehaviour
                 Shoot();
             }
         }
-
-
         if (Input.GetButtonDown("Fire2"))
         {
             playSlowMo();
         }
-
         if (Input.GetButton("Fire2"))
         {
             Time.timeScale = 0.1f;
@@ -89,21 +85,18 @@ public class railScript : MonoBehaviour
             soundEffect.pitch = 1f;
         }
         soundEffect.Play(0);
-        shot = gun.transform.forward * 2000f;
         
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
             
             getHitScript target= hit.transform.GetComponent<getHitScript>();
             if (target!=null)
-            {
-                shot = target.transform.position;
-                
+            {              
                 target.TakeDamage(damage);
             }
 
         }
-        drawLine(gun.transform.position,shot, Color.green, 0.5f);
+        drawLine(gun.transform.position, fpsCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1000f)), Color.green, 0.5f);
 
     }
 
@@ -119,7 +112,7 @@ public class railScript : MonoBehaviour
         lr.SetWidth(0.1f, 0.1f);
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
-        GameObject.Destroy(myLine, 2f);
+        GameObject.Destroy(myLine, 0.5f);
     }
 
 }

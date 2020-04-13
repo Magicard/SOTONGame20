@@ -9,6 +9,7 @@ TagManager:
   - 1
   - FxTemporaire
   - Splitter
+  - Particles
   layers:
   - Default
   - TransparentFX

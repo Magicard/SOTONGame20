@@ -43,7 +43,10 @@ public class getHitScript : MonoBehaviour
 
 	void Die()
 	{
-		Instantiate(particles, gameObject.transform.position, gameObject.transform.rotation);
+        if (GameObject.FindGameObjectsWithTag("Particles").Length < 6)
+        {
+            Instantiate(particles, gameObject.transform.position, gameObject.transform.rotation);
+        }
 		Destroy(gameObject);
 	}
 

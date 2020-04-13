@@ -18,6 +18,7 @@ public class lookScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         fov = 65f;
         Cursor.lockState = CursorLockMode.Locked;   
     }
